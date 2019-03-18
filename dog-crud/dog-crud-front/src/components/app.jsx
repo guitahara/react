@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Routes from '../routes/routes';
-import Drawer from './template/drawer';
+import Template from './template/index';
+import {Grid} from '@material-ui/core'
 
 class App extends Component {
   render() {
     return (
-        <div>
-            <Drawer/>
+        <Grid xs={12}>
+          <Template>
             <Routes/>
-        </div>
+          </Template>
+        </Grid>
     );
   }
 }
