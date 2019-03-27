@@ -5,11 +5,18 @@ import App from './components/app';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore,applyMiddleware} from 'redux';
+import reducer from './reducers/index';
+import multi from 'redux-multi'
+import promise from 'redux-promise';
+
+const store = applyMiddleware(multi,promise)(createStore)(reducer)
 
 ReactDOM.render(
     <BrowserRouter>
+        <Provider store={store}>
             <App /> 
+        </Provider>
     </BrowserRouter>,
     document.getElementById('root')
 );

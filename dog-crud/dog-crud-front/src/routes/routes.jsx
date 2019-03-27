@@ -3,7 +3,6 @@ import {Route, Switch} from 'react-router-dom';
 import List from '../components/dogs/list/index';
 import Insert from '../components/dogs/insert/index';
 import Edit from '../components/dogs/edit/index';
-import Details from '../components/dogs/details/index';
 import Home from '../components/home/index';
 
 

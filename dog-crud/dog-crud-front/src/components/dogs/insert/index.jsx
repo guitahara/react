@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Typography, Paper, FormGroup, Grid, Input, FormControl, InputLabel, TextField, Fab } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import { withStyles } from '@material-ui/core/styles';
+import { bindActionCreators } from 'redux';
+import {addDog, updateDogInfo} from '../../../reducers/dog/action-creator';
+import {connect} from 'react-redux';
 
 const styles = theme => ({
     fab: {
@@ -12,6 +15,9 @@ const styles = theme => ({
 });
 
 class Insert extends Component {
+    constructor(props){
+        super(props)
+    }
 
     render() {
         const{classes,theme} = this.props
@@ -56,5 +62,6 @@ class Insert extends Component {
         )
     }
 }
-
-export default withStyles(styles, { withTheme: true })(Insert)
+const mapDispatchToProps = dispatch => bindActionCreators({addDog,updateDogInfo},dispatch)
+const mapStateToProps = state => ({dog:state.dog.dog})
+export default connect(mapStateToProps,mapDispatchToProps)(withStyles(styles, { withTheme: true })(Insert))

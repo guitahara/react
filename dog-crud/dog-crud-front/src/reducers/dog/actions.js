@@ -1,0 +1,6 @@
+export const ADD_DOG = 'ADD_DOG'
+export const REMOVE_DOG = 'REMOVE_DOG'
+export const EDIT_DOG = 'EDIT_DOG'
+export const SEARCH_DOG = 'SEARCH_DOG'
+export const SEARCH_DOG_BY_ID = 'GET_DOG_BY_ID'
+export const UPDATE_DOG_INFO = 'UPDATE_DOG_INFO'

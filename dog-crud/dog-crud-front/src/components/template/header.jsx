@@ -54,7 +54,6 @@ class Header extends Component {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" color="inherit" noWrap>
-                        API
                     </Typography>
                 </Toolbar>
             </AppBar>

@@ -9,6 +9,8 @@ const swagger = require('./config/swagger');
 //register swagger
 fastify.register(fastifySwagger,swagger.options)
 
+//activate cors
+fastify.register(require('fastify-cors'))
 //register routes
 routes.forEach(route => fastify.route(route))
 
